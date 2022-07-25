@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="logo">Header Logo</div>
+            <ul>
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+            </ul>
+            <div class="icon">☰</div>
+        </div>
+
+        <div class="web-info">
+            <div class="left-section">
+                <div class="intro-heading">This website is awesome</div>
+                <div class="intro-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+                    optio asperiores debitis laudantium vitae obcaecati.
+                </div>
+                <button class="signup-btn">Sign up</button>
+            </div>
+            <img class="intro-img"
+                src="https://images.unsplash.com/photo-1590935216109-8d3318de2c1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                alt="image describing the company" />
+        </div>
+    </div>
+
+    <div class="information">
+        <p class="info-header">Some random information.</p>
+        <div class="info-images">
+            <div class="img-section">
+                <img
+                    src="https://images.unsplash.com/photo-1590935216109-8d3318de2c1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+
+                <p>
+                    some text under illustration some text under illustration some text
+                    under illustration
+                </p>
+            </div>
+            <div class="img-section">
+                <img
+                    src="https://images.unsplash.com/photo-1590935216109-8d3318de2c1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+
+                <p>
+                    some text under illustration some text under illustration some text
+                    under illustration
+                </p>
+            </div>
+            <div class="img-section">
+                <img
+                    src="https://images.unsplash.com/photo-1590935216109-8d3318de2c1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+
+                <p>
+                    some text under illustration some text under illustration some text
+                    under illustration
+                </p>
+            </div>
+            <div class="img-section">
+                <img
+                    src="https://images.unsplash.com/photo-1590935216109-8d3318de2c1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+
+                <p>
+                    some text under illustration some text under illustration some text
+                    under illustration
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="qoute-section">
+        <p class="qoute">
+            If you see the world and yourself through a lens smudged by negativity,
+            then you’ll find much misery. If you look outwards and inwards through
+            lens brightened by positivity you’ll find much to be happy and
+            appreciative about.
+        </p>
+        <p class="author">- Henrik Edberg</p>
+    </div>
+
+    <div class="signup-section">
+        <div class="signup">
+            <div class="text">
+                <h5>Call to action! It's time!</h5>
+                <p>
+                    Sign up for our product by clicking that button right over there!
+                </p>
+            </div>
+            <button>Sign up</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © The Odin Project 2021</p>
+    </footer>
+
+    <script>
+        let list = document.querySelector("ul");
+        let icon = document.querySelector(".icon");
+        let navbar = document.querySelector(".navbar");
+        let click = 0;
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 540) {
+                click = 0;
+                if (list.style.display === "none")
+                    list.style.display = "flex";
+            }
+            else {
+                list.style.display = "none";
+            }
+
+        });
+
+        icon.style.fontSize = "20px";
+        icon.style.fontWeight = "bold";
+
+        icon.addEventListener("click", function () {
+            if (click === 0) {
+                list.style.display = "none";
+                click++;
+            }
+
+            if (list.style.display === "none") {
+                list.style.display = "flex";
+            } else {
+                list.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
